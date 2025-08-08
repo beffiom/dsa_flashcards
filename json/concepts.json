@@ -1,10 +1,178 @@
-{
+[
   {
-    "uuid": "",
-    "card_name": "",
-    "description": "",
-    "type": "",
-    "when_to_use": "",
-    "time_complexity": ""
+    "card_uuid": "1",
+    "card_name": "Big O Notation",
+    "description": "Big O Notation is a mathematical notation used to describe the upper bound of an algorithm's time or space complexity, representing the worst-case scenario performance as a function of the input size.",
+    "type": "High Level",
+    "when_to_use": "Used to analyze and compare the efficiency of algorithms and data structures by describing how their runtime or space requirements grow as input size increases.",
+    "time_complexity": "Varies depending on the algorithm being analyzed; examples include constant O(1), logarithmic O(log n), linear O(n), quadratic O(n^2), etc."
   },
-}
+  {
+    "card_uuid": "2",
+    "card_name": "Time Complexity",
+    "description": "Time Complexity specifies how the time taken by an algorithm to run changes relative to the input size.",
+    "type": "High Level",
+    "when_to_use": "Used to estimate the runtime efficiency of algorithms to predict how they scale and perform with larger inputs.",
+    "time_complexity": "Expressed using Big O notation like O(1), O(log n), O(n), O(n log n), O(n^2), etc."
+  },
+  {
+    "card_uuid": "3",
+    "card_name": "Space Complexity",
+    "description": "Space Complexity describes the amount of memory an algorithm uses relative to the input size.",
+    "type": "High Level",
+    "when_to_use": "Used to analyze how much additional memory an algorithm requires during execution.",
+    "time_complexity": "Expressed using Big O notation similarly to time complexity."
+  },
+  {
+    "card_uuid": "4",
+    "card_name": "Constant Big O Notation",
+    "description": "Constant time complexity means the algorithm takes the same amount of time regardless of input size.",
+    "type": "High Level",
+    "when_to_use": "Use when operations do not depend on input size, such as accessing an element by index in an array.",
+    "time_complexity": "O(1)"
+  },
+  {
+    "card_uuid": "5",
+    "card_name": "Linear Big O Notation",
+    "description": "Linear time complexity means the runtime grows linearly with the input size.",
+    "type": "High Level",
+    "when_to_use": "Used in algorithms that process each element once, like linear search through an array.",
+    "time_complexity": "O(n)"
+  },
+  {
+    "card_uuid": "6",
+    "card_name": "Quadratic Big O Notation",
+    "description": "Quadratic time complexity means the runtime grows proportionally to the square of the input size.",
+    "type": "High Level",
+    "when_to_use": "Occurs in algorithms with nested loops iterating over the input, like bubble sort.",
+    "time_complexity": "O(n^2)"
+  },
+  {
+    "card_uuid": "7",
+    "card_name": "Logarithmic Big O Notation",
+    "description": "Logarithmic time complexity means the runtime grows proportionally to the logarithm of the input size.",
+    "type": "High Level",
+    "when_to_use": "Common in divide-and-conquer algorithms like binary search where the input size is halved each step.",
+    "time_complexity": "O(log n)"
+  },
+  {
+    "card_uuid": "8",
+    "card_name": "Array",
+    "description": "An array is a collection of elements identified by index, stored contiguously in memory.",
+    "type": "Data Structure",
+    "when_to_use": "Use when you need fast random access to elements by index and fixed-size collections.",
+    "time_complexity": "Access O(1), Search O(n), Insertion/Deletion O(n)"
+  },
+  {
+    "card_uuid": "9",
+    "card_name": "Linked List",
+    "description": "A linked list is a linear collection of nodes where each node contains data and a reference to the next node.",
+    "type": "Data Structure",
+    "when_to_use": "Use for dynamic collections where insertion and deletion are frequent and random access is less important.",
+    "time_complexity": "Access O(n), Insertion/Deletion O(1) if node reference known"
+  },
+  {
+    "card_uuid": "10",
+    "card_name": "Binary Search",
+    "description": "Binary search is an efficient algorithm for finding an item in a sorted array by repeatedly dividing the search interval in half.",
+    "type": "Algorithm",
+    "when_to_use": "Use when searching for an element in a sorted collection.",
+    "time_complexity": "O(log n)"
+  },
+  {
+    "card_uuid": "11",
+    "card_name": "Linear Search",
+    "description": "Linear search checks each element in a collection sequentially until the target element is found.",
+    "type": "Algorithm",
+    "when_to_use": "Use when the collection is unsorted or small.",
+    "time_complexity": "O(n)"
+  },
+  {
+    "card_uuid": "12",
+    "card_name": "Merge Sort",
+    "description": "Merge Sort is a divide-and-conquer sorting algorithm that recursively splits the array, sorts, and then merges sorted subarrays.",
+    "type": "Algorithm",
+    "when_to_use": "Use for sorting with guaranteed O(n log n) worst-case time and stable sorting requirement.",
+    "time_complexity": "O(n log n)"
+  },
+  {
+    "card_uuid": "13",
+    "card_name": "Heap",
+    "description": "A heap is a specialized tree-based data structure that satisfies the heap property: parent nodes are ordered with respect to their children (max-heap or min-heap).",
+    "type": "Data Structure",
+    "when_to_use": "Use for efficiently finding the minimum or maximum element and implementing priority queues.",
+    "time_complexity": "Insertion O(log n), Access max/min O(1), Deletion O(log n)"
+  },
+  {
+    "card_uuid": "14",
+    "card_name": "Stack",
+    "description": "A stack is a linear data structure that follows the Last In First Out (LIFO) principle.",
+    "type": "Data Structure",
+    "when_to_use": "Use when you need to access only the most recently added element, such as in recursion or undo functionality.",
+    "time_complexity": "Push O(1), Pop O(1), Peek O(1)"
+  },
+  {
+    "card_uuid": "15",
+    "card_name": "Queue",
+    "description": "A queue is a linear data structure that follows the First In First Out (FIFO) principle.",
+    "type": "Data Structure",
+    "when_to_use": "Use when you need to process elements in the order they arrive, like task scheduling.",
+    "time_complexity": "Enqueue O(1), Dequeue O(1), Peek O(1)"
+  },
+  {
+    "card_uuid": "16",
+    "card_name": "Hash Map",
+    "description": "A hash map is a data structure that stores key-value pairs using a hash function to compute an index into an array of buckets.",
+    "type": "Data Structure",
+    "when_to_use": "Use when you need fast insertion, deletion, and lookup of key-value pairs.",
+    "time_complexity": "Average case O(1) for insert, delete, search; worst case O(n)"
+  },
+  {
+    "card_uuid": "17",
+    "card_name": "Set",
+    "description": "A set is an abstract data type that stores unique elements with no particular order.",
+    "type": "Data Structure",
+    "when_to_use": "Use when you want to store distinct items and quickly test membership.",
+    "time_complexity": "Insertion, Deletion, and Membership check average O(1) if implemented with a hash map"
+  },
+  {
+    "card_uuid": "18",
+    "card_name": "Tree",
+    "description": "A tree is a hierarchical data structure composed of nodes with a parent-child relationship.",
+    "type": "Data Structure",
+    "when_to_use": "Use to represent hierarchical relationships or for efficient sorted data access depending on the tree type.",
+    "time_complexity": "Varies by tree type; balanced binary search tree operations average O(log n)"
+  },
+  {
+    "card_uuid": "19",
+    "card_name": "Graph",
+    "description": "A graph is a collection of nodes (vertices) connected by edges, which may be directed or undirected.",
+    "type": "Data Structure",
+    "when_to_use": "Use for modeling relationships, networks, or connections between objects.",
+    "time_complexity": "Depends on representation; adjacency list O(V+E) for traversal, adjacency matrix O(V^2)"
+  },
+  {
+    "card_uuid": "20",
+    "card_name": "Depth First Search",
+    "description": "Depth First Search (DFS) is a graph traversal algorithm that explores as far as possible along each branch before backtracking.",
+    "type": "Algorithm",
+    "when_to_use": "Use to explore or search in graphs or trees, useful for pathfinding and cycle detection.",
+    "time_complexity": "O(V + E), where V is vertices and E is edges"
+  },
+  {
+    "card_uuid": "21",
+    "card_name": "Breadth First Search",
+    "description": "Breadth First Search (BFS) is a graph traversal algorithm that explores all neighbors at the present depth prior to moving on to nodes at the next depth level.",
+    "type": "Algorithm",
+    "when_to_use": "Use to find shortest paths in unweighted graphs and traverse graphs level by level.",
+    "time_complexity": "O(V + E)"
+  },
+  {
+    "card_uuid": "22",
+    "card_name": "Dijkstra's Algorithm",
+    "description": "Dijkstra's algorithm finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative weights.",
+    "type": "Algorithm",
+    "when_to_use": "Use for shortest path problems in weighted graphs without negative edge weights.",
+    "time_complexity": "O((V + E) log V) using a priority queue"
+  }
+]
