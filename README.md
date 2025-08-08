@@ -34,8 +34,9 @@ usage: dsa_flashcards.py [-h] --deck DECK [--random] [--num NUM] [--card CARD] [
 ![Example Search](img/sample_search.png)
 - prints card in deck by name
 ### --list [all, in_db]
-![Example List Cards In DB](img/sample_list_in_db.png)
+![Example List All Card Names](img/sample_list_all.png)
 - can list all the cards in the deck
+![Example List Cards In DB](img/sample_list_in_db.png)
 - or just list cards in_db (cards that have already been seen by the program)
 
 ## decks

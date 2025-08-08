@@ -376,25 +376,16 @@ def get_card_by_name(deck, card_name, db_path):
 
 def list_cards(deck):
     """
-    Print each card in the deck, excluding a fixed set of fields, 
-    with each field name in bold and each card as a block.
+    Print all card names in the deck using PrettyTable format.
     """
-    # Fixed set of fields to skip
-    exclude_fields = set()
-    deck_name = deck[0]['deck_name']
+    table = PrettyTable()
+    table.field_names = ["Card Name"]
 
-    if deck_name == "neetcode150":
-        exclude_fields = {"description", "python_code", "leetcode_link", 
-                          "neetcode_link", "space_complexity"}
     for card in deck:
-        fields_to_show = [k for k in card.keys() if k not in exclude_fields]
-        for field in fields_to_show:
-            value = card[field]
-            # Print field name in bold; value as-is (handles multiline)
-            print(f"\033[1m{field.replace('_',' ').capitalize()}:\033[0m")
-            print(value if value is not None else "")
-            print() # blank line between fields
-        print('-'*40)  # separator line between cards
+        card_name = card.get('card_name', '')
+        table.add_row([card_name])
+
+    print(table)
 
 def search_card(deck, card_name):
     """
