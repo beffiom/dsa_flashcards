@@ -1,7 +1,7 @@
 # dsa_flashcards
 python script for quick dsa study using a spaced repetition algorithm
 
-## pre-requestions
+## pre-requisites
 This project requires the following Python packages:
 
 - prettytable
