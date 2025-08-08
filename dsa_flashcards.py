@@ -142,7 +142,7 @@ def anki_select_card(deck, db_path):
 
         # Find card_id with due date <= now (card due for review)
         cursor.execute('''
-            SELECT c.card_uuid, c.card_name, s.interval, s.repetitions, s.ease, s.due
+            SELECT c.deck_name, c.card_uuid, c.card_name, s.interval, s.repetitions, s.ease, s.due
             FROM cards c
             JOIN scheduling s ON c.id = s.card_id
             WHERE s.due IS NOT NULL AND s.due <= ?
@@ -151,10 +151,11 @@ def anki_select_card(deck, db_path):
         row = cursor.fetchone()
 
         if row:
-            card_uuid, card_name, interval, repetitions, ease, due_str = row
+            deck_name, card_uuid, card_name, interval, repetitions, ease, due_str = row
             card_data = next((c for c in deck if c['card_uuid'] == card_uuid), None)
             if card_data is None:
-                print(f"Warning: card_uuid {card_uuid} found in DB but missing in JSON deck")
+                if deck_name == deck[0]['deck_name']:
+                    print(f"Warning: card_uuid {card_uuid} found in DB but missing in JSON deck")
             else:
                 due_dt = datetime.fromisoformat(due_str) if due_str else now
                 scheduler_card = Card()
@@ -183,7 +184,12 @@ def anki_select_card(deck, db_path):
         # Insert initial scheduling data if not exists
         cursor.execute("SELECT 1 FROM scheduling WHERE card_id = ?", (card_id,))
         if not cursor.fetchone():
-            initial_sched = Card(interval=0, repetitions=0, ease=2.5, due=now)
+
+            initial_sched = Card()
+            initial_sched.interval = 0
+            initial_sched.repetitions = 0
+            initial_sched.ease = 2.5
+            initial_sched.due = now
             cursor.execute(
                 "INSERT INTO scheduling (card_id, interval, repetitions, ease, due) VALUES (?, ?, ?, ?, ?)",
                 (card_id, initial_sched.interval, initial_sched.repetitions, initial_sched.ease, initial_sched.due.isoformat())
