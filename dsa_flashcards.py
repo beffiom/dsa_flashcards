@@ -490,11 +490,11 @@ def main():
         return
 
     if has_num:
+        num = args.num
         if num not in range(1, len(deck)):
             print(f"Error: deck {deck_name} has {len(deck)} entries. Num must be between 1 and {len(deck)}.")
             sys.exit(1)
         else:
-            num = args.num
             if has_random:
                 for _ in range(num):
                     card_data, scheduler_card = random_select_card(deck, db_path)
