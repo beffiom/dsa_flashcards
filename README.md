@@ -17,7 +17,7 @@ pip install anki-sm-2
 python dsa_flashcards.py
 
 ## usage
-usage: dsa_flashcards.py [-h] --deck DECK [--random] [--num NUM] [--card CARD] [--list]
+usage: dsa_flashcards.py [-h] --deck DECK [--random] [--num NUM] [--card CARD] [--search SEARCH] [--list {all,in_db}]
 ### default
 ![Example Front](img/sample_card_front.png)
 ![Example Back](img/sample_card_back.png)
