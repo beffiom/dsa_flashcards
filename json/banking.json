@@ -1,0 +1,124 @@
+[
+  {
+    "card_name": "API (Application Programming Interface)",
+    "description": "",
+    "explanation": "Set of rules and protocols for communication between software systems, used to exchange data or trigger transactions in banking platforms.",
+    "type": "Core Terms",
+    "uuid": "85bfa3be-a645-48cf-bfad-7bcb20ef4cb0"
+  },
+  {
+    "card_name": "REST / RPC / SOAP",
+    "description": "",
+    "explanation": "Main architectural styles for APIs; REST is preferred in banking for stateless interactions and simplicity.",
+    "type": "Core Terms",
+    "uuid": "b3e92d9c-2a07-45cf-bb4e-0ebf90a13b04"
+  },
+  {
+    "card_name": "AISP (Account Information Services Provider)",
+    "description": "",
+    "explanation": "Entity authorized under open banking to access and aggregate financial data from multiple banks.",
+    "type": "Core Terms",
+    "uuid": "342df8c1-5dcc-419d-b152-ce0e60a6e9cd"
+  },
+  {
+    "card_name": "PSU (Payment Service User)",
+    "description": "",
+    "explanation": "Individual or entity that uses financial services via API-enabled banking or fintech platforms.",
+    "type": "Core Terms",
+    "uuid": "dd7d2a3d-5372-4b62-ad7d-4b148ea187fb"
+  },
+  {
+    "card_name": "SCA (Strong Customer Authentication)",
+    "description": "",
+    "explanation": "Multilayer authentication method using two or more factors to validate user identity per PSD2 regulation.",
+    "type": "Core Terms",
+    "uuid": "5b858241-c6cd-46be-b46d-0c500c4de51d"
+  },
+  {
+    "card_name": "ACH (Automated Clearing House)",
+    "description": "",
+    "explanation": "Batch-based network for electronic funds transfers between banks, supporting payroll, bill payments, and direct deposits.",
+    "type": "Core Terms",
+    "uuid": "c7f1d1ac-f1e3-457e-974e-8f404faa302d"
+  },
+  {
+    "card_name": "Wire Transfer",
+    "description": "",
+    "explanation": "Electronic funds transfer between banks via payment rails (SWIFT, SEPA, FedWire), typically for high-value or cross-border payments.",
+    "type": "Core Terms",
+    "uuid": "a542908b-f13c-417c-ad2a-3b7bacc61ed2"
+  },
+  {
+    "card_name": "Payment Rails",
+    "description": "",
+    "explanation": "Underlying network or protocol for moving money (e.g., ACH, card networks, SWIFT); affects speed, cost, and compliance.",
+    "type": "Core Terms",
+    "uuid": "81cd83bb-60c7-442e-9457-f7632b92b3c7"
+  },
+  {
+    "card_name": "KYC (Know Your Customer)",
+    "description": "",
+    "explanation": "Regulatory process for verifying user identities to prevent fraud and meet compliance obligations.",
+    "type": "Core Terms",
+    "uuid": "6b6f3e74-006a-45f2-9640-6e9157ad3cb2"
+  },
+  {
+    "card_name": "AML (Anti-Money Laundering)",
+    "description": "",
+    "explanation": "Regulatory framework for detecting, reporting, and preventing financial crime and suspicious activity.",
+    "type": "Core Terms",
+    "uuid": "31f1a871-938c-4862-9d7b-40e5ca5bb5f0"
+  },
+  {
+    "card_name": "PCI DSS",
+    "description": "",
+    "explanation": "Industry standard for securing credit card data during processing, transmission, and storage.",
+    "type": "Core Terms",
+    "uuid": "2823e674-958a-4bb6-9e04-5ded1b493b84"
+  },
+  {
+    "card_name": "Idempotency",
+    "description": "",
+    "explanation": "API design property ensuring repeated requests yield the same result, crucial for financial operations to prevent duplication.",
+    "type": "Core Terms",
+    "uuid": "d6e2faa8-97cd-4f0a-944e-607a1fe839b7"
+  },
+  {
+    "card_name": "OAuth2",
+    "description": "",
+    "explanation": "Protocol for secure API authorization using access tokens and scopes without exposing passwords.",
+    "type": "Core Terms",
+    "uuid": "2c55c417-2937-4c52-b7b7-9ad51c8f5b2f"
+  },
+  {
+    "card_name": "Access Token",
+    "description": "",
+    "explanation": "Credential for accessing secured APIs, typically short-lived and scoped to user/session permissions.",
+    "type": "Core Terms",
+    "uuid": "b924e7bc-81ec-4e24-914f-eb3d5121c949"
+  },
+  {
+    "card_name": "API Uptime",
+    "description": "",
+    "explanation": "Measure of API availability; critical banking interfaces target near-perfect ('five nines') uptime.",
+    "type": "Core Terms",
+    "uuid": "5f8b3ee5-4048-4e94-b2ad-b5de015e6a09"
+  },
+  {
+    "card_name": "Acquirer",
+    "description": "",
+    "explanation": "Bank that processes merchant payments and routes them to the relevant networks.",
+    "type": "Key Banking and Payment Terms",
+    "uuid": "eebefca2-22c1-4edb-acb8-04718022ad73"
+  },
+  {
+    "card_name": "Issuer",
+    "description": "",
+    "explanation": "Bank or institution that issues payment cards to consumers and handles authorization.",
+    "type": "Key Banking and Payment Terms",
+    "uuid": "d0456729-1ff2-44c6-b19c-0ed491d8e69f"
+  },
+  {
+    "card_name": "Settlement",
+    "description": "",
+    "explanation": "Transfer of funds between institutions after transaction authorization
